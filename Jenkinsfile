@@ -31,7 +31,7 @@ pipeline {
                 //To specify folder, use arugment --folder "Folder Name"
                 //To provide environment variables, use --env-var "key=value"
                     //Example in P2B RFI, --env-var "baseUrl=https://baseUrl=https://172.25.10.57:8443" for SIT Server
-        sh "newman run ${TEST_COLLECTION_PATH} --folder 'Instapay' ${SKIP_VAR} --env-var 'baseUrl=${BASE_URL}' -r htmlextra --insecure"
+        sh "newman run ${TEST_COLLECTION_PATH} ${SKIP_VAR} --env-var 'baseUrl=${BASE_URL}' -r htmlextra --insecure"
             }
         }
     }
