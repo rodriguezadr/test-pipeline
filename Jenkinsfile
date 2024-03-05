@@ -7,11 +7,6 @@ pipeline {
         SKIP_VAR = "${env.SKIP_VAR}"
         NODEJS_HOME = '/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation'
     }
-     tools {
-         //Change name to your Node.js installation
-        nodejs 'Newman' 
-    }
-    
 
     stages {
         
