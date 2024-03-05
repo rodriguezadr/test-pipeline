@@ -5,7 +5,7 @@ pipeline {
         BASE_URL = 'https://172.25.10.57:8443'
         TEST_COLLECTION_PATH = '/home/adrian/Desktop/Test_Instapay_P2B_RFI.postman_collection'
         SKIP_VAR = "${env.SKIP_VAR}"
-        NODEJS_HOME = '/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation'
+        NODEJS_HOME = '/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/Newman/bin/node'
     }
 
     stages {
@@ -19,7 +19,7 @@ pipeline {
                 credentialsId: 'b59f4f33-99f8-49fd-8eaf-e7c45bfd1bf0',
                 url: 'https://github.com/pnbph-asid/pnb-biller-service.git'
                 script {
-                    env.PATH = "${NODEJS_HOME}/Newman/bin/node"
+                    env.PATH = "${NODEJS_HOME}"
                 }
             }
         }
