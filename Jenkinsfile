@@ -18,9 +18,12 @@ pipeline {
                //Change to sabilaed-github
                 credentialsId: 'b59f4f33-99f8-49fd-8eaf-e7c45bfd1bf0',
                 url: 'https://github.com/pnbph-asid/pnb-biller-service.git'
+                    
                 script {
                     env.PATH = "${env.NODEJS_HOME}/bin:${env.PATH}"
                 }
+                 sh 'npm -v'
+           
             }
         }
             
@@ -30,6 +33,7 @@ pipeline {
                 //To specify folder, use arugment --folder "Folder Name"
                 //To provide environment variables, use --env-var "key=value"
                     //Example in P2B RFI, --env-var "baseUrl=https://baseUrl=https://172.25.10.57:8443" for SIT Server
+                    
         sh "newman run ${TEST_COLLECTION_PATH} ${SKIP_VAR} --env-var 'baseUrl=${BASE_URL}' -r htmlextra --insecure"
             }
         }
