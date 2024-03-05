@@ -5,7 +5,7 @@ pipeline {
         BASE_URL = 'https://172.25.10.57:8443'
         TEST_COLLECTION_PATH = '/home/adrian/Desktop/Test_Instapay_P2B_RFI.postman_collection'
         SKIP_VAR = "${env.SKIP_VAR}"
-
+    }
      tools {
          //Change name to your Node.js installation
         nodejs 'Newman' 
@@ -36,7 +36,7 @@ pipeline {
         }
     }
 } 
-}  
+
 
 
 
