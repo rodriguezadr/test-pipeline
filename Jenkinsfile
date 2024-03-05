@@ -16,7 +16,7 @@ pipeline {
                git branch: 'integration',
                //Replace with your credentials as found in Jenkins credential manager
         
-                credentialsId: 'sabilaed-github',
+                credentialsId: 'b59f4f33-99f8-49fd-8eaf-e7c45bfd1bf0',
                 url: 'https://github.com/pnbph-asid/pnb-biller-service.git'
                     
                 script {
